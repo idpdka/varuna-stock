@@ -35,9 +35,5 @@
     <!-- FOOTER -->
     @include('footer')
 
-    <!-- MODALS -->
-    @include('addmodal')
-    @include('editmodal')
-    @include('deletemodal')
   </body>
 </html>

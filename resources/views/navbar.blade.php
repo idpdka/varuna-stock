@@ -1,4 +1,3 @@
-<!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container">
     <a class="navbar-brand" href="#">Stock Management</a>
@@ -12,6 +11,12 @@
             <a class="nav-link">Hi, {{ $user['name'] }}
               <span class="sr-only">(current)</span>
             </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('/items') }}">Inventaris</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('/suppliers') }}">Supplier</a>
           </li>
           <li class="nav-item">
             <form method="post" id="logout-form" action="{{ url('logout') }}">

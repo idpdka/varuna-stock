@@ -1,4 +1,4 @@
-<div class="modal fade" id="editModal" tabindex="-1">
+<div class="modal fade" id="editItemModal" tabindex="-1">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -23,8 +23,21 @@
             <input type="text" name="buy_price" class="form-control mdl-buy-price"/>
           </div>
           <div class="form-group">
-            <label>Jumlah stok awal</label>
+            <label>Jumlah stok</label>
             <input type="text" name="quantity" class="form-control mdl-quantity"/>
+          </div>
+          <div class="form-group">
+            <label>Supplier</label>
+            <select class="form-control" id="sel1" name="supplier_id">
+              <option>-- Pilih supplier --</option>
+              @foreach ($suppliers as $supplier)
+                <option value="{{ $supplier->id }}">{{ $supplier->company_name }}</option>
+              @endforeach
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Keterangan</label>
+            <input type="text" name="note" class="form-control mdl-note"/>
           </div>
         </div>
         <div class="modal-footer">
